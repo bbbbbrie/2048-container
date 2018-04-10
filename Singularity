@@ -1,6 +1,9 @@
 BootStrap: docker
 From: ubuntu:artful
 
+%runscript
+    /usr/games/2048-qt
+
 %post
     apt-get -y update && apt-get -y install figlet lolcat 2048-qt
     /usr/bin/figlet "hello, world" | /usr/games/lolcat
